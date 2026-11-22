@@ -31,13 +31,25 @@ function render(){
  document.querySelectorAll(".card").forEach(c=>c.onclick=()=>openModal(+c.dataset.id));
  $("#resultText").textContent=`顯示 ${a.length} / ${badges.length} 個徽章`;
 }
+function closeModal(){
+ const modal = $("#modal");
+ modal.hidden = true;
+}
 function openModal(id){
  let b=badges.find(x=>x.id===id);
+ if(!b) return;
  $("#modalBody").innerHTML=`<div class="modal-img"><img src="${b.image}" alt="${b.name}"></div><span class="tag">${b.typeName}</span><h2>${b.name}</h2><p class="modal-game">${b.game}</p><hr><p><b>取得條件</b><br>${b.condition}</p><p><b>截止時間</b><br>${dateText(b.deadline)}</p><p>${b.desc}</p>`;
  $("#modal").hidden=false;
 }
-$("#close").onclick=()=>$("#modal").hidden=true;
-$(".modal-bg").onclick=()=>$("#modal").hidden=true;
+$("#close").addEventListener("click", (event)=>{
+ event.preventDefault();
+ event.stopPropagation();
+ closeModal();
+});
+$(".modal-bg").addEventListener("click", closeModal);
+document.addEventListener("keydown", (event)=>{
+ if(event.key === "Escape" && !$("#modal").hidden) closeModal();
+});
 $("#search").oninput=e=>{query=e.target.value;render()};
 $("#sort").onchange=e=>{sort=e.target.value;render()};
 document.querySelectorAll("#filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()});
