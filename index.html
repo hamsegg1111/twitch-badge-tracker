@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Twitch 徽章資訊站 V2">
+<title>Twitch 徽章資訊站 V2</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#"><span>T</span><div><b>Twitch Badge Tracker</b><small>徽章即時情報站</small></div></a>
+  <div class="top-actions"><button id="obsBtn">OBS 模式</button><a href="#notice">注意事項</a></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow">TWITCH BADGE TRACKER · V2</div>
+  <h1>找到你想要的<br><em>Twitch 徽章</em></h1>
+  <p>集中整理活動徽章、取得方式與截止時間。使用搜尋和分類快速找到可以收集的徽章。</p>
+  <div class="hero-stats">
+    <div><b id="totalCount">0</b><span>全部徽章</span></div>
+    <div><b id="activeCount">0</b><span>進行中</span></div>
+    <div><b id="soonCount">0</b><span>即將截止</span></div>
+    <div><b id="freeCount">0</b><span>免費取得</span></div>
+  </div>
+</section>
+
+<section class="toolbar">
+  <div class="search"><span>⌕</span><input id="search" placeholder="搜尋徽章、遊戲、取得方式…"></div>
+  <div class="filters" id="filters">
+    <button class="active" data-filter="all">全部</button>
+    <button data-filter="watch">觀看取得</button>
+    <button data-filter="sub">訂閱取得</button>
+    <button data-filter="soon">即將截止</button>
+  </div>
+  <select id="sort">
+    <option value="deadline">依截止時間</option>
+    <option value="name">依名稱</option>
+    <option value="type">依取得方式</option>
+  </select>
+</section>
+
+<section>
+  <div class="section-head"><div><span>BADGE COLLECTION</span><h2>徽章資料庫</h2></div><p id="resultText"></p></div>
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" hidden>找不到符合條件的徽章。</div>
+</section>
+
+<section class="path">
+  <div class="section-head"><div><span>COLLECTION PATH</span><h2>收集路徑</h2></div></div>
+  <div class="steps">
+    <div><b>01</b><strong>找到活動</strong><small>搜尋想要的徽章</small></div>
+    <i>→</i>
+    <div><b>02</b><strong>完成條件</strong><small>觀看或訂閱指定頻道</small></div>
+    <i>→</i>
+    <div><b>03</b><strong>取得徽章</strong><small>確認 Twitch 帳號已符合條件</small></div>
+    <i>→</i>
+    <div class="final"><b>04</b><strong>收藏完成</strong><small>在 Twitch 個人資料查看</small></div>
+  </div>
+</section>
+
+<section class="upcoming">
+  <div class="section-head"><div><span>COMING SOON</span><h2>即將到來</h2></div></div>
+  <div class="coming-grid">
+    <div><strong>St. Trina</strong><span>ELDEN RING</span><b>12/01 開放</b></div>
+    <div><strong>RuneScape Santa Hat</strong><span>RuneScape</span><b>12/01 開放</b></div>
+  </div>
+</section>
+
+<section id="notice" class="notice">
+<h2>注意事項</h2>
+<ul>
+<li>所有活動時間與取得條件可能變動，請以 Twitch 官方活動頁面為準。</li>
+<li>時間顯示以台灣使用者方便閱讀的日期格式呈現。</li>
+<li>部分徽章需要觀看指定分類或訂閱指定頻道。</li>
+<li>本網站為非官方資訊整理站，Twitch 商標與相關遊戲商標均屬其權利人所有。</li>
+</ul>
+</section>
+</main>
+
+<footer>© 2026 Twitch Badge Tracker · 非官方資訊整理網站</footer>
+
+<div id="modal" class="modal" hidden>
+ <div class="modal-bg"></div>
+ <article class="modal-card">
+   <button class="close" id="close">×</button>
+   <div id="modalBody"></div>
+ </article>
+</div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+const badges = [
+{id:1,name:"GTA VI：邁阿密項鍊系列",game:"Grand Theft Auto VI",type:"watch",typeName:"觀看取得",status:"進行中",deadline:"2026-12-01T16:59:00+08:00",condition:"每日觀看 60 分鐘，共 6 天",image:"https://static-cdn.jtvnw.net/badges/v1/015f3db0-1a3f-4e4a-970d-bea3adb3a331/3",desc:"指定 Grand Theft Auto VI 分類觀看即可完成收集條件。"},
+{id:2,name:"PAYDAY 3：角色面具",game:"PAYDAY 3",type:"watch",typeName:"觀看取得",status:"即將截止",deadline:"2026-11-27T20:59:00+08:00",condition:"觀看 30 / 60 / 90 分鐘",image:"https://static-cdn.jtvnw.net/badges/v1/e8ff781d-a445-4ed3-9790-9514a2eb45f0/3",desc:"觀看指定 PAYDAY 3 分類直播即可取得。"},
+{id:3,name:"寶可夢：終極進化",game:"Pokémon",type:"watch",typeName:"觀看取得",status:"長期活動",deadline:"2027-01-31T23:59:00+08:00",condition:"裝備前階徽章後觀看 20 分鐘 × 3 天",image:"https://static-cdn.jtvnw.net/badges/v1/21c5d89c-bea4-4682-8080-96b22770d0f4/3",desc:"需先持有初階徽章，再完成進化條件。"},
+{id:4,name:"戰士壺亞歷山大",game:"ELDEN RING",type:"sub",typeName:"訂閱取得",status:"訂閱",deadline:"2026-11-30T23:59:00+08:00",condition:"訂閱或贈送訂閱至指定分類頻道",image:"https://static-cdn.jtvnw.net/badges/v1/a080167b-6264-404b-b9b1-e5a68348299f/3",desc:"艾爾登法環月度系列徽章。"},
+{id:5,name:"魔獸世界：永恆陣營",game:"World of Warcraft",type:"sub",typeName:"訂閱取得",status:"雙徽章",deadline:"2026-12-01T23:59:00+08:00",condition:"一次訂閱即可獲得陣營系列徽章",image:"https://static-cdn.jtvnw.net/badges/v1/59d5bb2e-0d62-4116-a6bc-79cd5afe9246/3",desc:"慶祝魔獸世界新版本的限時系列活動。"},
+{id:6,name:"GTA VI：黃金鬣蜥",game:"Grand Theft Auto VI",type:"sub",typeName:"訂閱取得",status:"ULTIMATE DROP",deadline:"2026-12-01T23:59:00+08:00",condition:"收集 6 款免費項鍊與 3 款訂閱徽章",image:"https://static-cdn.jtvnw.net/badges/v1/62c3816a-87d6-4ca0-bce0-fca6bcfa719f/3",desc:"完成整套 GTA VI 徽章收集後解鎖的終極成就。"},
+{id:7,name:"DOOM：黑暗時代",game:"DOOM: The Dark Ages",type:"sub",typeName:"訂閱取得",status:"NEW RELEASE",deadline:"2026-12-12T23:59:00+08:00",condition:"訂閱或贈禮至指定分類頻道",image:"https://static-cdn.jtvnw.net/badges/v1/80e404b7-673b-4ca8-ab69-1779f9685eec/3",desc:"慶祝 Slaughter Mode 上線的限時徽章。"}
+];
